@@ -6,31 +6,58 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>416</width>
-    <height>326</height>
+    <width>397</width>
+    <height>462</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>397</width>
+    <height>462</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>397</width>
+    <height>462</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>htmldigger</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
-    <number>2</number>
+    <number>0</number>
    </property>
    <property name="topMargin">
-    <number>2</number>
+    <number>0</number>
    </property>
    <property name="rightMargin">
-    <number>2</number>
+    <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>2</number>
+    <number>1</number>
    </property>
    <property name="spacing">
     <number>1</number>
    </property>
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>395</width>
+       <height>460</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>395</width>
+       <height>458</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(143, 240, 164);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -42,9 +69,19 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>391</width>
-        <height>110</height>
+        <width>373</width>
+        <height>113</height>
        </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(61, 56, 70);
+border-radius: 10px;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -118,11 +155,21 @@
      <widget class="QFrame" name="frame_3">
       <property name="geometry">
        <rect>
-        <x>9</x>
+        <x>10</x>
         <y>129</y>
-        <width>391</width>
-        <height>183</height>
+        <width>373</width>
+        <height>241</height>
        </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>680</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(61, 56, 70);
+border-radius: 10px;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -131,103 +178,193 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
           <string>System Info</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>35</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLabel" name="label_cpu">
-              <property name="text">
-               <string>CPU : </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_cpuval">
-              <property name="text">
-               <string>cpuName</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item alignment="Qt::AlignLeft">
+              <widget class="QLabel" name="label_cpu">
+               <property name="text">
+                <string>Cpu usage :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_cpuval">
+               <property name="text">
+                <string>cpuName</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <widget class="QLabel" name="label_ip">
-              <property name="text">
-               <string>ip : </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_ipval">
-              <property name="text">
-               <string>192.168.0.1</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_ip">
+               <property name="text">
+                <string>Ip address : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_ipval">
+               <property name="text">
+                <string>192.168.0.1</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label_user">
-              <property name="text">
-               <string>user : </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_userval">
-              <property name="text">
-               <string>username</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QFrame" name="frame_6">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_user">
+               <property name="text">
+                <string>User name : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_userval">
+               <property name="text">
+                <string>username</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="label_uptime">
-              <property name="text">
-               <string>uptime : </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_uptimeval">
-              <property name="text">
-               <string>uptime</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_uptime">
+               <property name="text">
+                <string>uptime       : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_uptimeval">
+               <property name="text">
+                <string>uptime</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="text">
-               <string>ram : </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_5">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QFrame" name="frame_8">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_ram">
+               <property name="text">
+                <string>Ram            : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_ramval">
+               <property name="text">
+                <string>Ram</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>440</y>
+        <width>381</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item alignment="Qt::AlignLeft">
+        <widget class="QLabel" name="hostname">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(36, 31, 49);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QLabel" name="ip_">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(36, 31, 49);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
         </widget>
        </item>
       </layout>

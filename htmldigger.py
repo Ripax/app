@@ -14,23 +14,38 @@ version = '1.0.3'
 _am = datetime.today().strftime("%I:%M %p")
 
 
-class main_eindow(Ui_Form, QWidget):
+class main_window(Ui_Form, QWidget):
     def _set_time(self):
         xtime = QtCore.QTime.currentTime()
         text = xtime.toString("hh:mm:ss ap")
         self.label_time.setText(text)
 
     def __init__(self):
-        super(main_eindow, self).__init__()
+        super(main_window, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("HTMLDigger Build : ({x} {y})".format(x=username, y=version))
         self.label_version.setText(version)
+
+        self.mainwidgets()
+        self.statusbar()
+
+    def mainwidgets(self):
         cpu = utils.cpu()
-        self.label_cpuval.setText(cpu)
+        self.label_cpuval.setText(str(cpu))
         ip = utils.ip()
         self.label_ipval.setText(ip)
         hostname = utils.hostname()
         self.label_userval.setText(hostname)
+        uptime = ' '.join(utils.uptime())
+        self.label_uptimeval.setText(uptime)
+        ram = utils.ram()
+        self.label_ramval.setText(f"{ram}GB")
+
+    def statusbar(self):
+        ip = utils.ip()
+        self.ip_.setText(f'ip : {ip}')
+        hostname = utils.hostname()
+        self.hostname.setText(f'Hostname : {hostname}')
 
         timer = QtCore.QTimer(self)
         timer.timeout.connect(self._set_time)
@@ -40,6 +55,6 @@ class main_eindow(Ui_Form, QWidget):
 # For widgets
 if __name__ == '__main__':
     app = QApplication()
-    widgets = main_eindow()
+    widgets = main_window()
     widgets.show()
     sys.exit(app.exec_())
